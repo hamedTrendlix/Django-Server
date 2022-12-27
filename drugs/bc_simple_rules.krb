@@ -1,0 +1,720 @@
+# bc_simple_rules.krb
+takeCongestal
+    use get_drug(Congestal)
+    when
+        facts.diagnose($cold , $headache , $highTemperature , $sneezing, $musclePain , $soreThroat , $dizziness , $sinuses , $sideEffects, $age)
+        check $cold == True
+        check $headache == True
+        check $highTemperature == False
+        check $sneezing == True
+        check $musclePain == False
+        check $soreThroat == False
+        check $dizziness == False
+        check $sinuses == True
+        check $sideEffects == True
+        check $age >= 15
+
+takeComtrex
+    use get_drug(Comtrex)
+    when
+        facts.diagnose($cold , $headache , $highTemperature , $sneezing, $musclePain , $soreThroat , $dizziness , $sinuses , $sideEffects, $age)
+        check $cold == True
+        check $headache == True
+        check $highTemperature == True
+        check $sneezing == True
+        check $musclePain == True
+        check $soreThroat == True
+        check $dizziness == True
+        check $sinuses == True
+        check $sideEffects == True
+        check $age >= 15
+
+take123
+    use get_drug(123)
+    when
+        facts.diagnose($cold , $headache , $highTemperature , $sneezing, $musclePain , $soreThroat , $dizziness , $sinuses , $sideEffects, $age)
+        check $cold == True
+        check $headache == True
+        check $highTemperature == True
+        check $sneezing == True
+        check $musclePain == False
+        check $soreThroat == False
+        check $dizziness == False
+        check $sinuses == True
+        check $sideEffects == True
+        check $age >= 6
+
+takeTamiflu
+    use get_drug(Tamiflu)
+    when
+        facts.diagnose($cold , $headache , $highTemperature , $sneezing, $musclePain , $soreThroat , $dizziness , $sinuses , $sideEffects, $age)
+        check $cold == True
+        check $headache == False
+        check $highTemperature == True
+        check $sneezing == True
+        check $musclePain == False
+        check $soreThroat == True
+        check $dizziness == True
+        check $sinuses == True
+        check $sideEffects == True
+        check $age >= 6
+
+takeFlurist
+    use get_drug(Flurist)
+    when
+        facts.diagnose($cold , $headache , $highTemperature , $sneezing, $musclePain , $soreThroat , $dizziness , $sinuses , $sideEffects, $age)
+        check $cold == True
+        check $headache == True
+        check $highTemperature == True
+        check $sneezing == True
+        check $musclePain == True
+        check $soreThroat == True
+        check $dizziness == True
+        check $sinuses == True
+        check $sideEffects == False
+        check $age >= 15
+
+takeBronchicum
+    use get_drug(Bronchicum)
+    when
+        facts.diagnose($cold , $headache , $highTemperature , $sneezing, $musclePain , $soreThroat , $dizziness , $sinuses , $sideEffects, $age)
+        check $cold == True
+        check $headache == False
+        check $highTemperature == False
+        check $sneezing == False
+        check $musclePain == True
+        check $soreThroat == True
+        check $dizziness == False
+        check $sinuses == True
+        check $sideEffects == False
+        check $age >= 15
+
+takeTlafast
+    use get_drug(Tlafast)
+    when
+        facts.diagnose($cold , $headache , $highTemperature , $sneezing, $musclePain , $soreThroat , $dizziness , $sinuses , $sideEffects, $age)
+        check $cold == False
+        check $headache == True
+        check $highTemperature == False
+        check $sneezing == False
+        check $musclePain == True
+        check $soreThroat == False
+        check $dizziness == True
+        check $sinuses == True
+        check $sideEffects == False
+        check $age >= 15
+
+takeClaritin
+    use get_drug(Claritin)
+    when
+        facts.diagnose($cold , $headache , $highTemperature , $sneezing, $musclePain , $soreThroat , $dizziness , $sinuses , $sideEffects, $age)
+        check $cold == True
+        check $headache == False
+        check $highTemperature == False
+        check $sneezing == True
+        check $musclePain == False
+        check $soreThroat == False
+        check $dizziness == True
+        check $sinuses == True
+        check $sideEffects == False
+        check $age >= 6
+
+takeCevamol
+    use get_drug(Cevamol)
+    when
+        facts.diagnose($cold , $headache , $highTemperature , $sneezing, $musclePain , $soreThroat , $dizziness , $sinuses , $sideEffects, $age)
+        check $cold == False
+        check $headache == True
+        check $highTemperature == False
+        check $sneezing == False
+        check $musclePain == True
+        check $soreThroat == False
+        check $dizziness == True
+        check $sinuses == False
+        check $sideEffects == False
+        check $age >= 15
+
+takeOtrivin
+    use get_drug(Otrivin)
+    when
+        facts.diagnose($cold , $headache , $highTemperature , $sneezing, $musclePain , $soreThroat , $dizziness , $sinuses , $sideEffects, $age)
+        check $cold == False
+        check $headache == True
+        check $highTemperature == False
+        check $sneezing == True
+        check $musclePain == False
+        check $soreThroat == False
+        check $dizziness == True
+        check $sinuses == True
+        check $sideEffects == True
+        check $age >= 15
+
+takePanadol
+    use get_drug(Panadol)
+    when
+        facts.diagnose($cold , $headache , $highTemperature , $sneezing, $musclePain , $soreThroat , $dizziness , $sinuses , $sideEffects, $age)
+        check $cold == True
+        check $headache == True
+        check $highTemperature == True
+        check $sneezing == True
+        check $musclePain == True
+        check $soreThroat == True
+        check $dizziness == True
+        check $sinuses == True
+        check $sideEffects == True
+        check $age >= 15
+
+takeAdol
+    use get_drug(Adol)
+    when
+        facts.diagnose($cold , $headache , $highTemperature , $sneezing, $musclePain , $soreThroat , $dizziness , $sinuses , $sideEffects, $age)
+        check $cold == True
+        check $headache == True
+        check $highTemperature == True
+        check $sneezing == True
+        check $musclePain == True
+        check $soreThroat == False
+        check $dizziness == False
+        check $sinuses == False
+        check $sideEffects == False
+        check $age >= 6
+
+takeParacetamol
+    use get_drug(Paracetamol)
+    when
+        facts.diagnose($cold , $headache , $highTemperature , $sneezing, $musclePain , $soreThroat , $dizziness , $sinuses , $sideEffects, $age)
+        check $cold == False
+        check $headache == False
+        check $highTemperature == True
+        check $sneezing == False
+        check $musclePain == True
+        check $soreThroat == False
+        check $dizziness == True
+        check $sinuses == True
+        check $sideEffects == True
+        check $age >= 15
+
+takeIbuprofen
+    use get_drug(Ibuprofen)
+    when
+        facts.diagnose($cold , $headache , $highTemperature , $sneezing, $musclePain , $soreThroat , $dizziness , $sinuses , $sideEffects, $age)
+        check $cold == False
+        check $headache == False
+        check $highTemperature == True
+        check $sneezing == False
+        check $musclePain == True
+        check $soreThroat == False
+        check $dizziness == False
+        check $sinuses == True
+        check $sideEffects == True
+        check $age >= 15
+
+takeDiclofenacSodium
+    use get_drug(DiclofenacSodium)
+    when
+        facts.diagnose($cold , $headache , $highTemperature , $sneezing, $musclePain , $soreThroat , $dizziness , $sinuses , $sideEffects, $age)
+        check $cold == True
+        check $headache == True
+        check $highTemperature == False
+        check $sneezing == False
+        check $musclePain == True
+        check $soreThroat == False
+        check $dizziness == True
+        check $sinuses == True
+        check $sideEffects == False
+        check $age >= 15
+
+takeCatafly
+    use get_drug(Catafly)
+    when
+        facts.diagnose($cold , $headache , $highTemperature , $sneezing, $musclePain , $soreThroat , $dizziness , $sinuses , $sideEffects, $age)
+        check $cold == False
+        check $headache == True
+        check $highTemperature == True
+        check $sneezing == False
+        check $musclePain == True
+        check $soreThroat == False
+        check $dizziness == True
+        check $sinuses == False
+        check $sideEffects == True
+        check $age >= 6
+
+takeOtrinol
+    use get_drug(Otrinol)
+    when
+        facts.diagnose($cold , $headache , $highTemperature , $sneezing, $musclePain , $soreThroat , $dizziness , $sinuses , $sideEffects, $age)
+        check $cold == False
+        check $headache == False
+        check $highTemperature == False
+        check $sneezing == False
+        check $musclePain == True
+        check $soreThroat == False
+        check $dizziness == True
+        check $sinuses == False
+        check $sideEffects == False
+        check $age >= 15
+
+takeClindamycin
+    use get_drug(Clindamycin)
+    when
+        facts.diagnose($cold , $headache , $highTemperature , $sneezing, $musclePain , $soreThroat , $dizziness , $sinuses , $sideEffects, $age)
+        check $cold == False
+        check $headache == True
+        check $highTemperature == True
+        check $sneezing == False
+        check $musclePain == False
+        check $soreThroat == False
+        check $dizziness == True
+        check $sinuses == False
+        check $sideEffects == True
+        check $age >= 15
+
+takeYanamox125
+    use get_drug(Yanamox125)
+    when
+        facts.diagnose($cold , $headache , $highTemperature , $sneezing, $musclePain , $soreThroat , $dizziness , $sinuses , $sideEffects, $age)
+        check $cold == False
+        check $headache == False
+        check $highTemperature == False
+        check $sneezing == True
+        check $musclePain == True
+        check $soreThroat == True
+        check $dizziness == True
+        check $sinuses == True
+        check $sideEffects == False
+        check $age >= 6
+
+takeActivid
+    use get_drug(Activid)
+    when
+        facts.diagnose($cold , $headache , $highTemperature , $sneezing, $musclePain , $soreThroat , $dizziness , $sinuses , $sideEffects, $age)
+        check $cold == False
+        check $headache == True
+        check $highTemperature == False
+        check $sneezing == True
+        check $musclePain == False
+        check $soreThroat == False
+        check $dizziness == True
+        check $sinuses == True
+        check $sideEffects == False
+        check $age >= 6
+
+takeCetal
+    use get_drug(Cetal)
+    when
+        facts.diagnose($cold , $headache , $highTemperature , $sneezing, $musclePain , $soreThroat , $dizziness , $sinuses , $sideEffects, $age)
+        check $cold == False
+        check $headache == True
+        check $highTemperature == True
+        check $sneezing == False
+        check $musclePain == True
+        check $soreThroat == False
+        check $dizziness == True
+        check $sinuses == False
+        check $sideEffects == True
+        check $age >= 6
+
+takeNovalgin
+    use get_drug(Novalgin)
+    when
+        facts.diagnose($cold , $headache , $highTemperature , $sneezing, $musclePain , $soreThroat , $dizziness , $sinuses , $sideEffects, $age)
+        check $cold == False
+        check $headache == False
+        check $highTemperature == True
+        check $sneezing == False
+        check $musclePain == False
+        check $soreThroat == False
+        check $dizziness == False
+        check $sinuses == False
+        check $sideEffects == False
+        check $age >= 15
+
+takeParamol
+    use get_drug(Paramol)
+    when
+        facts.diagnose($cold , $headache , $highTemperature , $sneezing, $musclePain , $soreThroat , $dizziness , $sinuses , $sideEffects, $age)
+        check $cold == True
+        check $headache == True
+        check $highTemperature == True
+        check $sneezing == False
+        check $musclePain == True
+        check $soreThroat == False
+        check $dizziness == False
+        check $sinuses == False
+        check $sideEffects == True
+        check $age >= 6
+
+takeParalgan
+    use get_drug(Paralgan)
+    when
+        facts.diagnose($cold , $headache , $highTemperature , $sneezing, $musclePain , $soreThroat , $dizziness , $sinuses , $sideEffects, $age)
+        check $cold == False
+        check $headache == False
+        check $highTemperature == True
+        check $sneezing == False
+        check $musclePain == True
+        check $soreThroat == False
+        check $dizziness == False
+        check $sinuses == False
+        check $sideEffects == False
+        check $age >= 6
+
+takeVegaskine
+    use get_drug(Vegaskine)
+    when
+        facts.diagnose($cold , $headache , $highTemperature , $sneezing, $musclePain , $soreThroat , $dizziness , $sinuses , $sideEffects, $age)
+        check $cold == False
+        check $headache == False
+        check $highTemperature == False
+        check $sneezing == False
+        check $musclePain == True
+        check $soreThroat == False
+        check $dizziness == True
+        check $sinuses == True
+        check $sideEffects == True
+        check $age >= 15
+
+takeDolphin
+    use get_drug(Dolphin)
+    when
+        facts.diagnose($cold , $headache , $highTemperature , $sneezing, $musclePain , $soreThroat , $dizziness , $sinuses , $sideEffects, $age)
+        check $cold == False
+        check $headache == True
+        check $highTemperature == False
+        check $sneezing == False
+        check $musclePain == True
+        check $soreThroat == False
+        check $dizziness == False
+        check $sinuses == False
+        check $sideEffects == False
+        check $age >= 6
+
+takeTylenol
+    use get_drug(Tylenol)
+    when
+        facts.diagnose($cold , $headache , $highTemperature , $sneezing, $musclePain , $soreThroat , $dizziness , $sinuses , $sideEffects, $age)
+        check $cold == True
+        check $headache == True
+        check $highTemperature == True
+        check $sneezing == False
+        check $musclePain == False
+        check $soreThroat == True
+        check $dizziness == False
+        check $sinuses == False
+        check $sideEffects == False
+        check $age >= 6
+
+takeAdvil
+    use get_drug(Advil)
+    when
+        facts.diagnose($cold , $headache , $highTemperature , $sneezing, $musclePain , $soreThroat , $dizziness , $sinuses , $sideEffects, $age)
+        check $cold == False
+        check $headache == True
+        check $highTemperature == False
+        check $sneezing == False
+        check $musclePain == True
+        check $soreThroat == False
+        check $dizziness == False
+        check $sinuses == False
+        check $sideEffects == False
+        check $age >= 6
+
+takeMortin
+    use get_drug(Mortin)
+    when
+        facts.diagnose($cold , $headache , $highTemperature , $sneezing, $musclePain , $soreThroat , $dizziness , $sinuses , $sideEffects, $age)
+        check $cold == False
+        check $headache == True
+        check $highTemperature == True
+        check $sneezing == False
+        check $musclePain == True
+        check $soreThroat == False
+        check $dizziness == False
+        check $sinuses == False
+        check $sideEffects == True
+        check $age >= 6
+
+takeAbimol
+    use get_drug(Abimol)
+    when
+        facts.diagnose($cold , $headache , $highTemperature , $sneezing, $musclePain , $soreThroat , $dizziness , $sinuses , $sideEffects, $age)
+        check $cold == False
+        check $headache == True
+        check $highTemperature == True
+        check $sneezing == False
+        check $musclePain == False
+        check $soreThroat == False
+        check $dizziness == False
+        check $sinuses == False
+        check $sideEffects == True
+        check $age >= 6
+
+takeColdControl
+    use get_drug(ColdControl)
+    when
+        facts.diagnose($cold , $headache , $highTemperature , $sneezing, $musclePain , $soreThroat , $dizziness , $sinuses , $sideEffects, $age)
+        check $cold == True
+        check $headache == False
+        check $highTemperature == True
+        check $sneezing == False
+        check $musclePain == True
+        check $soreThroat == False
+        check $dizziness == False
+        check $sinuses == False
+        check $sideEffects == False
+        check $age >= 15
+
+takeRenatiol
+    use get_drug(Renatiol)
+    when
+        facts.diagnose($cold , $headache , $highTemperature , $sneezing, $musclePain , $soreThroat , $dizziness , $sinuses , $sideEffects, $age)
+        check $cold == False
+        check $headache == False
+        check $highTemperature == False
+        check $sneezing == True
+        check $musclePain == False
+        check $soreThroat == False
+        check $dizziness == False
+        check $sinuses == False
+        check $sideEffects == True
+        check $age >= 6
+
+takeNightAndDay
+    use get_drug(NightAndDay)
+    when
+        facts.diagnose($cold , $headache , $highTemperature , $sneezing, $musclePain , $soreThroat , $dizziness , $sinuses , $sideEffects, $age)
+        check $cold == True
+        check $headache == True
+        check $highTemperature == False
+        check $sneezing == True
+        check $musclePain == False
+        check $soreThroat == True
+        check $dizziness == True
+        check $sinuses == False
+        check $sideEffects == False
+        check $age >= 6
+
+takeKytril1MGTab
+    use get_drug(Kytril1MGTab)
+    when
+        facts.diagnose($cold , $headache , $highTemperature , $sneezing, $musclePain , $soreThroat , $dizziness , $sinuses , $sideEffects, $age)
+        check $cold == False
+        check $headache == False
+        check $highTemperature == False
+        check $sneezing == False
+        check $musclePain == False
+        check $soreThroat == False
+        check $dizziness == True
+        check $sinuses == False
+        check $sideEffects == False
+        check $age >= 15
+
+takeAloxi
+    use get_drug(Aloxi)
+    when
+        facts.diagnose($cold , $headache , $highTemperature , $sneezing, $musclePain , $soreThroat , $dizziness , $sinuses , $sideEffects, $age)
+        check $cold == False
+        check $headache == False
+        check $highTemperature == False
+        check $sneezing == False
+        check $musclePain == False
+        check $soreThroat == False
+        check $dizziness == True
+        check $sinuses == False
+        check $sideEffects == True
+        check $age >= 15
+
+takeEmend
+    use get_drug(Emend)
+    when
+        facts.diagnose($cold , $headache , $highTemperature , $sneezing, $musclePain , $soreThroat , $dizziness , $sinuses , $sideEffects, $age)
+        check $cold == False
+        check $headache == False
+        check $highTemperature == False
+        check $sneezing == False
+        check $musclePain == False
+        check $soreThroat == False
+        check $dizziness == True
+        check $sinuses == False
+        check $sideEffects == False
+        check $age >= 15
+
+takeOrmazine
+    use get_drug(Ormazine)
+    when
+        facts.diagnose($cold , $headache , $highTemperature , $sneezing, $musclePain , $soreThroat , $dizziness , $sinuses , $sideEffects, $age)
+        check $cold == False
+        check $headache == False
+        check $highTemperature == False
+        check $sneezing == False
+        check $musclePain == False
+        check $soreThroat == False
+        check $dizziness == True
+        check $sinuses == True
+        check $sideEffects == False
+        check $age >= 15
+
+takePremosan
+    use get_drug(Premosan)
+    when
+        facts.diagnose($cold , $headache , $highTemperature , $sneezing, $musclePain , $soreThroat , $dizziness , $sinuses , $sideEffects, $age)
+        check $cold == False
+        check $headache == False
+        check $highTemperature == False
+        check $sneezing == False
+        check $musclePain == False
+        check $soreThroat == False
+        check $dizziness == True
+        check $sinuses == False
+        check $sideEffects == False
+        check $age >= 15
+
+takeBenadryl
+    use get_drug(Benadryl)
+    when
+        facts.diagnose($cold , $headache , $highTemperature , $sneezing, $musclePain , $soreThroat , $dizziness , $sinuses , $sideEffects, $age)
+        check $cold == False
+        check $headache == False
+        check $highTemperature == False
+        check $sneezing == True
+        check $musclePain == False
+        check $soreThroat == True
+        check $dizziness == False
+        check $sinuses == True
+        check $sideEffects == False
+        check $age >= 15
+
+takeTrilafon
+    use get_drug(Trilafon)
+    when
+        facts.diagnose($cold , $headache , $highTemperature , $sneezing, $musclePain , $soreThroat , $dizziness , $sinuses , $sideEffects, $age)
+        check $cold == False
+        check $headache == True
+        check $highTemperature == False
+        check $sneezing == False
+        check $musclePain == False
+        check $soreThroat == False
+        check $dizziness == True
+        check $sinuses == False
+        check $sideEffects == False
+        check $age >= 15
+
+takeGenprid
+    use get_drug(Genprid)
+    when
+        facts.diagnose($cold , $headache , $highTemperature , $sneezing, $musclePain , $soreThroat , $dizziness , $sinuses , $sideEffects, $age)
+        check $cold == False
+        check $headache == True
+        check $highTemperature == False
+        check $sneezing == False
+        check $musclePain == False
+        check $soreThroat == False
+        check $dizziness == False
+        check $sinuses == False
+        check $sideEffects == False
+        check $age >= 15
+
+takeRhinathiolPlus
+    use get_drug(RhinathiolPlus)
+    when
+        facts.diagnose($cold , $headache , $highTemperature , $sneezing, $musclePain , $soreThroat , $dizziness , $sinuses , $sideEffects, $age)
+        check $cold == False
+        check $headache == True
+        check $highTemperature == False
+        check $sneezing == True
+        check $musclePain == True
+        check $soreThroat == True
+        check $dizziness == False
+        check $sinuses == True
+        check $sideEffects == True
+        check $age >= 6
+
+takeZofran
+    use get_drug(Zofran)
+    when
+        facts.diagnose($cold , $headache , $highTemperature , $sneezing, $musclePain , $soreThroat , $dizziness , $sinuses , $sideEffects, $age)
+        check $cold == False
+        check $headache == False
+        check $highTemperature == False
+        check $sneezing == False
+        check $musclePain == False
+        check $soreThroat == False
+        check $dizziness == False
+        check $sinuses == True
+        check $sideEffects == True
+        check $age >= 6
+
+takeZemitron8MG
+    use get_drug(Zemitron8MG)
+    when
+        facts.diagnose($cold , $headache , $highTemperature , $sneezing, $musclePain , $soreThroat , $dizziness , $sinuses , $sideEffects, $age)
+        check $cold == False
+        check $headache == False
+        check $highTemperature == False
+        check $sneezing == False
+        check $musclePain == False
+        check $soreThroat == False
+        check $dizziness == True
+        check $sinuses == False
+        check $sideEffects == False
+        check $age >= 15
+
+takeSureptil50MG
+    use get_drug(Sureptil50MG)
+    when
+        facts.diagnose($cold , $headache , $highTemperature , $sneezing, $musclePain , $soreThroat , $dizziness , $sinuses , $sideEffects, $age)
+        check $cold == False
+        check $headache == True
+        check $highTemperature == False
+        check $sneezing == False
+        check $musclePain == False
+        check $soreThroat == False
+        check $dizziness == False
+        check $sinuses == True
+        check $sideEffects == False
+        check $age >= 15
+
+takeHistaloc
+    use get_drug(Histaloc)
+    when
+        facts.diagnose($cold , $headache , $highTemperature , $sneezing, $musclePain , $soreThroat , $dizziness , $sinuses , $sideEffects, $age)
+        check $cold == False
+        check $headache == False
+        check $highTemperature == False
+        check $sneezing == True
+        check $musclePain == False
+        check $soreThroat == False
+        check $dizziness == True
+        check $sinuses == True
+        check $sideEffects == True
+        check $age >= 15
+
+takeDobstron
+    use get_drug(Dobstron)
+    when
+        facts.diagnose($cold , $headache , $highTemperature , $sneezing, $musclePain , $soreThroat , $dizziness , $sinuses , $sideEffects, $age)
+        check $cold == False
+        check $headache == False
+        check $highTemperature == False
+        check $sneezing == False
+        check $musclePain == True
+        check $soreThroat == False
+        check $dizziness == False
+        check $sinuses == False
+        check $sideEffects == False
+        check $age >= 15
+
+takeClearest
+    use get_drug(Clearest)
+    when
+        facts.diagnose($cold , $headache , $highTemperature , $sneezing, $musclePain , $soreThroat , $dizziness , $sinuses , $sideEffects, $age)
+        check $cold == False
+        check $headache == False
+        check $highTemperature == False
+        check $sneezing == False
+        check $musclePain == False
+        check $soreThroat == False
+        check $dizziness == False
+        check $sinuses == True
+        check $sideEffects == False
+        check $age >= 15
