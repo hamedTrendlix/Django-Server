@@ -4,3 +4,4 @@ gunicorn==20.1.0
 psycopg2==2.8.6
 sqlparse==0.4.2
 django-cors-headers==3.13.0
+scitools-pyke==1.1.1
